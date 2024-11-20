@@ -4,7 +4,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    gap: 10px;
+    /* gap: 10px; */
 }
 header .up-header{
     display: flex;
@@ -51,7 +51,7 @@ header .down-header .search-bar{
 header .down-header .search-bar .search-button{
     position: absolute;
     right: 5%;
-    top: 30%;
+    top: 10%;
     font-size: 20px;
     cursor: pointer;
 }
@@ -98,6 +98,7 @@ header .nav-bar-header nav ul  {
 header .nav-bar-header nav ul li{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 header .products-navbar {
     display: flex;
@@ -121,52 +122,3 @@ header .products-navbar p{
     font-size: 18px;
 }
 
-/* header .logo a {
-    width: 20rem;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    color: black;
-}
-
-header .logo a h3 {
-    font-family: "Modern Antiqua";
-}
-
-header nav ul {
-    display: flex;
-    gap: 30px;
-}
-
-header nav ul li a {
-    color: black;
-    font-size: 0.8rem;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-    border: 2px solid black;
-    border-radius: 1.5rem;
-    padding: 0.4rem;
-}
-
-header nav ul li a:hover {
-    background-color: black;
-    color: white;
-    transition: 0.5s;
-}
-
-header .icons {
-    display: flex;
-    gap: 10px;
-    font-size: 1.3rem;
-}
-
-header .icons input {
-    border: 2px solid black;
-    border-radius: 1rem;
-    padding-left: 1.5rem;
-}
-
-header .icons .fa-solid,
-header .icons .fa-regular {
-    color: black;
-} */
