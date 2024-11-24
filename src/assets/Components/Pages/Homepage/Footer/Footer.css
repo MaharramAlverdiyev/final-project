@@ -1,0 +1,124 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 84%;
+  }
+  
+  .footer-column {
+    flex: 1;
+    margin: 0 15px;
+    min-width: 150px;
+  }
+  
+  .footer-column h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .footer-column ul li:hover {
+    text-decoration: underline;
+  }
+  
+
+  .contact ul li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-subscribe {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    
+  }
+  
+  .footer-subscribe h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    
+    /* width: 26%; */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .subscribe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .down-footer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    /* flex-direction: column; */
+  }
+  
+  .subscribe-container input {
+    padding: 10px;
+    border: 1px solid #fff;
+    background: none;
+    color: #fff;
+    border-radius: 5px;
+  }
+  
+  .subscribe-container button {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subscribe-container button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .social-icons span,
+  .store-icons button {
+    margin: 0 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .store-icons button {
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .store-icons button:hover {
+    background: #f0f0f0;
+  }
+  

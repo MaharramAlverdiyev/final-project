@@ -1,0 +1,168 @@
+.secTwo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  
+}
+.secTwo-center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 84%;
+}
+.secTwo h1{
+    display: flex;
+    justify-content: center;
+}
+.secTwo .category{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items:center;
+    /* gap: 30px; */
+    /* border: 1px solid black; */
+    height: 36rem;
+    flex-wrap: wrap;
+}
+
+.secTwo .category .up-category{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: start;
+    /* border: 1px solid black; */
+    height: 18rem;
+    /* padding: 10px; */
+}
+.secTwo .category .down-category{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: start;
+    /* border: 1px solid black; */
+    height: 18rem;
+    /* padding: 10px; */
+}
+.secTwo .man{
+    display: flex;
+    position: relative;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+.secTwo .man:hover .manImage {
+
+    transform: scale(1.2);  
+}
+.secTwo .man .manImage {
+    transition: 0.5s;
+}
+.secTwo .man h1{
+    display: flex;
+    justify-content: start;
+}
+.secTwo .man .man-image{
+    position: absolute;
+    /* left: 180%; */
+    bottom: 7%;
+    right: 4%;
+    
+}
+.secTwo .manImage{
+    width: 200px;
+    height: 200px;
+}
+.secTwo .woman{
+    display: flex;
+    position: relative;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+.secTwo .woman:hover .womanImage {
+
+    transform: scale(1.2);  
+}
+.secTwo .woman .womanImage {
+
+    transition: 0.5s;  
+}
+.secTwo .woman h1{
+    display: flex;
+   
+    justify-content: start; 
+ 
+}
+.secTwo .woman .woman-image{
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    object-fit: cover;
+    
+}
+.secTwo .womanImage{
+    /* width: 200px; */
+    height: 200px;
+}
+.secTwo .uni{
+    display: flex;
+    position: relative;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+.secTwo .uni:hover .uniImage {
+    transform: scale(1.2);  
+}
+.secTwo .uni .uniImage{
+    transition: 0.5s;
+}
+.secTwo .uni h1{
+    display: flex;
+    justify-content: start; 
+}
+.secTwo .uni .uni-image{
+    position: absolute;
+    bottom: 6%;
+    right: 0;
+    
+}
+.secTwo .uniImage{
+    /* width: 300px; */
+    height: 200px;
+}
+.secTwo .kid{
+    display: flex;
+    position: relative;
+    border: 1px solid black;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+.secTwo .kid:hover .kidImage {
+    transform: scale(1.2);  
+}
+.secTwo .kid .kidImage{
+    transition: 0.5s;
+}
+.secTwo .kid h1{
+    display: flex;
+    justify-content: start; 
+
+}
+.secTwo .kid .kid-image{
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    
+}
+.secTwo .kidImage{
+    width: 300px;
+    height: 100px;
+    /* object-fit: cover; */
+}
+

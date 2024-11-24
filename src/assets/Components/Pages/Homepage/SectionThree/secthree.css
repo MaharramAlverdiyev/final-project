@@ -1,0 +1,38 @@
+.secthree h1{
+    text-align: center;
+}
+.sec3-product{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.7rem;
+    padding-bottom: 1.8rem;
+}
+.secthree{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.secthree-center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 84%;
+}
+
+.secthree .secthree-controls button {
+    color: white;
+    background-color: rgb(255, 195, 45);
+    cursor: pointer;
+    line-height: normal;
+    padding: 12px 35px;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    border-radius: .4rem;
+    border: none;
+}
+.secthree .secthree-controls{
+    display: flex;
+    justify-content: center;
+}
