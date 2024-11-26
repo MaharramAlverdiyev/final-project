@@ -7,13 +7,24 @@ import Typography from '@mui/material/Typography';
 import '../Card/card.css'
 import { SlBasket } from "react-icons/sl";
 import { IoHeartSharp } from "react-icons/io5";
+import { useDispatch } from 'react-redux';
+import { addToWishList } from '../../../../../redux/features/wishListSlice';
+import { addToBasket } from '../../../../../redux/features/basketSlice';
 
 
 
 
 
 export default function RecipeReviewCard({item}) {
+  const dispatch = useDispatch();
 
+  const handleAddTowishList = () => {
+    dispatch(addToWishList(item));
+  }
+
+const handleAddToBasket = () => {
+  dispatch(addToBasket(item));
+}
 
 
 
@@ -39,8 +50,8 @@ export default function RecipeReviewCard({item}) {
       </Typography>
     </CardContent>
     <div className="fav-basket">
-      <div className="fav"><IoHeartSharp /> </div>
-      <div className="baskett"><SlBasket/></div>
+      <div  onClick={handleAddTowishList} className="fav"><IoHeartSharp /> </div>
+      <div onClick={handleAddToBasket} className="baskett"><SlBasket/></div>
     </div>
   </Card>
   );

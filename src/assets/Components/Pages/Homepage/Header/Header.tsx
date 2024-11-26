@@ -80,7 +80,7 @@ export const Header = () => {
                 <p className='whatsapp-text'>+994 55 527 53 56</p>
                 </div>
                 <div className="login-basket">
-                    <div className="favorite">
+                    <div onClick={() => navigate("/wishlist")} className="favorite">
                     <FaRegHeart />
                     <p>Bəyəndiklərim</p>
                     </div>
@@ -88,7 +88,7 @@ export const Header = () => {
                         <VscAccount />
                         <p>Login</p>
                     </div>
-                    <div className="basket">
+                    <div onClick={() => navigate("/your-basket")} className="basket">
                         <SlBasket />
                         <p>Səbət</p>
                     </div>

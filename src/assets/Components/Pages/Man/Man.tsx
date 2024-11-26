@@ -6,10 +6,12 @@ import { GoDotFill } from 'react-icons/go';
 import './man.css';
 import { useNavigate } from 'react-router-dom';
 
+
 export const Man = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState<any[]>([]);
   const [sortOption, setSortOption] = useState<string>('');
+  
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -25,10 +27,10 @@ export const Man = () => {
   }, []);
 
 
-  const menProducts = products.filter(product => product.category === 'Men');
+ const MenProducts = products.filter(product => product.category === 'Men');
 
 
-  const sortedProducts = [...menProducts].sort((a, b) => {
+ const sortedProducts = [...MenProducts].sort((a, b) => {
     if (sortOption === 'price-asc') return a.price - b.price;
     if (sortOption === 'price-desc') return b.price - a.price;
     if (sortOption === 'name-asc') return a.name.localeCompare(b.name);
@@ -80,7 +82,6 @@ export const Man = () => {
                     <div className="add-to">
                       <button className='add-to-fav'>Bəyən</button>
                       <button className='add-to-basket'>Səbətə əlavə et</button>
-
                     </div>
                   </div>
                 </div>
