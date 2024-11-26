@@ -4,21 +4,23 @@ import './secTwo.css'
 import man from'../../../Images/Man.png'
 import woman from '../../../Images/WWoman.png'
 import uni from '../../../Images/unisex.png'
+import { useNavigate } from 'react-router-dom'
 
 const SectionTwo = () => {
+  const navigate = useNavigate()
   return (
     <div className='secTwo'>
       <div className="secTwo-center">
         <BrandsLogo />
         <div className='category'>
           <div className="up-category">
-            <div className="man">
+            <div onClick={() => navigate("/man-category")} className="man">
               <h1>Kişi ətirləri</h1>
               <div className="man-image">
                 <img className="manImage"src={man} alt="" />
               </div>
             </div>
-            <div className="woman">
+            <div onClick={() => navigate("/woman-category")}  className="woman">
               <h1>Qadın ətirləri</h1>
               <div className="woman-image">
                 <img className="womanImage" src={woman} alt="" />

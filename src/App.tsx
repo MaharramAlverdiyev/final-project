@@ -1,13 +1,11 @@
-import { Header } from "./assets/Components/Pages/Homepage/Header/Header"
+
 import "./App.css"
-import { SectionOne } from "./assets/Components/Pages/Homepage/SectionOne/SectionOne"
-import SectionTwo from "./assets/Components/Pages/Homepage/SectionTwo/SectionTwo"
-import { Footer } from "./assets/Components/Pages/Homepage/Footer/Footer"
 import { useState, useEffect } from "react"
 import gif from './assets/Components/Images/fragrances-logo.gif'
-import { SecThree } from "./assets/Components/Pages/Homepage/SectionThree/SecThree"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { SectionFour } from "./assets/Components/Pages/Homepage/SectionFour/SectionFour"
+import { Man } from "./assets/Components/Pages/Man/Man"
+import { HomePage } from "./assets/Components/Pages/Homepage/HomePage"
+import { Woman } from "./assets/Components/Pages/Woman/Woman"
 
 
 
@@ -30,14 +28,12 @@ export const App: React.FC = () =>{
           <>
             <BrowserRouter>
               <Routes>
-                <Route path="/" element={<Header/>} />
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/man-category" element={<Man/>}/>
+                <Route path="/woman-category" element={<Woman/>}/>
               </Routes>
             </BrowserRouter>
-                <SectionOne />
-                <SectionTwo />
-                <SecThree />
-                <SectionFour/>
-                <Footer />
+
           </>
       }
     </div>

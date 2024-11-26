@@ -13,12 +13,12 @@ import { setActiveItem } from '../../../../redux/features/menuSlice';
 import { useEffect, useState } from 'react';
 import { FaRegHeart } from "react-icons/fa6";
 import { FaWhatsapp } from "react-icons/fa";
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 
 export const Header = () => {
-        // const navigate = useNavigate();
+        const navigate = useNavigate();
 
         const dispatch = useDispatch();
         const activeItem = useSelector((state) => state.menu.activeItem);
@@ -67,7 +67,7 @@ export const Header = () => {
                 <a href=""><FaTiktok /></a>
             </div>
             <div className="down-header">
-                <div className="logo" >
+                <div onClick={() => navigate("/")} className="logo" >
                     <img src={logo} alt="" />
                     <h1 className='logo-text' >QARABAGH <br /> PERFUMERY</h1>
                 </div>
