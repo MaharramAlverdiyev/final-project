@@ -6,6 +6,7 @@ import { SecThree } from './SectionThree/SecThree'
 import { SectionFour } from './SectionFour/SectionFour'
 import { Footer } from './Footer/Footer'
 import './homepage.css'
+import { SectionFive } from './SectionFive/SectionFive'
 
 export const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ export const HomePage = () => {
         <SectionTwo/>
         <SecThree/>
         <SectionFour/>
+        <SectionFive/>
         <Footer/>
     </div>
   )

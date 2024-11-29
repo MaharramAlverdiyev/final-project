@@ -1,0 +1,21 @@
+.sec-five {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sec-five-center {
+    display: flex;
+    flex-direction: column;
+    width: 50%;  
+    gap: 10px;
+}
+.sec5-title {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Playfair Display', serif
+}
+.sec5-text{
+    font-family: 'Montserrat' , serif;
+}

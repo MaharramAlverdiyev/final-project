@@ -3,6 +3,7 @@ import '../SectionThree/secthree.css';
 import { getProduct } from '../../../../redux/features/productSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import Card from './Card/Card';
+import { Link } from 'react-router-dom';
 
 export const SecThree = () => {
   const dispatch = useDispatch();
@@ -29,9 +30,10 @@ export const SecThree = () => {
     <div className='secthree'>
       <div className='secthree-center'>
         <h1>Ətirlər</h1>
-        <section className='sec3-product'>
+        <section className='secthree-product'>
           {value.slice(0, visibleItems).map((item) => (
-            <Card key={item.id} item={item} />
+             <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}><Card key={item.id} item={item} />
+             </Link>
           ))}
         </section>
         <div className='secthree-controls'>

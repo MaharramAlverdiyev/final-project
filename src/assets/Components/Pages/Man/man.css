@@ -51,30 +51,30 @@
     object-fit: cover;
   }
   
-  .product-details {
+  .product-detailss {
     padding: 15px;
     text-align: center;
   }
   
-  .product-name {
+  .product-namee {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
   }
   
-  .product-brand {
+  .product-brandd {
     font-size: 14px;
     color: #555;
     margin-bottom: 10px;
   }
   
-  .product-price {
+  .product-pricee {
     font-size: 16px;
     color: #007BFF;
     margin-bottom: 10px;
   }
   
-  .product-stock {
+  .product-stockk {
     font-size: 14px;
     color: #28a745;
     margin-bottom: 15px;

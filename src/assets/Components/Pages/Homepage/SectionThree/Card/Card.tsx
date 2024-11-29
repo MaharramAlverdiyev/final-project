@@ -10,6 +10,7 @@ import { IoHeartSharp } from "react-icons/io5";
 import { useDispatch } from 'react-redux';
 import { addToWishList } from '../../../../../redux/features/wishListSlice';
 import { addToBasket } from '../../../../../redux/features/basketSlice';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -17,6 +18,7 @@ import { addToBasket } from '../../../../../redux/features/basketSlice';
 
 export default function RecipeReviewCard({item}) {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleAddTowishList = () => {
     dispatch(addToWishList(item));
@@ -29,7 +31,8 @@ const handleAddToBasket = () => {
 
 
   return (
-    <Card sx={{ maxWidth: 407 }} style={{boxShadow:"10px 10px 20px yellow",cursor:"pointer"}} className='card'>
+    
+    <Card sx={{ maxWidth: 407 }} style={{boxShadow:"10px 10px 20px yellow",cursor:"pointer"}} className='card' >
     <CardHeader
       title={item.name}
       subheader={`${item.brand}`}

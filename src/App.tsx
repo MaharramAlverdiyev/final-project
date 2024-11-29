@@ -8,6 +8,7 @@ import { HomePage } from "./assets/Components/Pages/Homepage/HomePage"
 import { Woman } from "./assets/Components/Pages/Woman/Woman"
 import Wishlist from "./assets/Components/Pages/Wishlist/wishlist"
 import Basket from "./assets/Components/Pages/Basket/Basket"
+import { DetailPage } from "./assets/Components/Pages/DetailPages/DetailPage"
 
 
 
@@ -19,7 +20,7 @@ export const App: React.FC = () =>{
     setLoading(true)
     setTimeout(() => {
       setLoading(false)
-    }, 1500)
+    }, 1200)
   }, [])
   return (
     <div className="App">
@@ -35,6 +36,7 @@ export const App: React.FC = () =>{
                 <Route path="/woman-category" element={<Woman/>}/>
                 <Route path='/wishList' element={<Wishlist/>}/>
                 <Route path='/your-basket' element={<Basket/>}/>
+                <Route path="/product/:id" element={<DetailPage/>}/>
               </Routes>
             </BrowserRouter>
 

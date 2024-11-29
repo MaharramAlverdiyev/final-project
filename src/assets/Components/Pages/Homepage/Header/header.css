@@ -80,13 +80,13 @@ header .down-header .search-bar input {
 
 }
 
-header .down-header .search-bar {
+header .down-header .search-container {
     position: relative
 }
 
-header .down-header .search-bar .search-button {
+header .down-header .search-bar-container .search-button {
     position: absolute;
-    right: 5%;
+    right: 10%;
     top: 10%;
     font-size: 20px;
     cursor: pointer;
@@ -228,4 +228,46 @@ header .products-navbar p {
 }
 .menuItems .menuItems-li:hover{
     color: gray;
+}
+.search-bar-container {
+    position: relative;
+    width: 357px;
+}
+
+.search-results {
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto; 
+    border-radius: 15px;
+}
+.search-bar{
+    position: relative;
+}
+.search-results ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.search-results li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+}
+
+.search-results li:hover {
+    background-color: #f0f0f0;
+}
+
+.search-results p {
+    padding: 10px;
+    color: #888;
+    text-align: center;
 }
