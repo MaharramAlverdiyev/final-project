@@ -11,7 +11,7 @@ export const basketSlice = createSlice({
   reducers: {
     addToBasket: (state, action) => {
       if(state.items.some(item => item.id == action.payload.id)) {
-        alert("Bu məhsul artıq səbətinizə əlavə olunub") 
+        
       }else{
         state.items.push(action.payload);
         localStorage.setItem('basket', JSON.stringify(state.items));

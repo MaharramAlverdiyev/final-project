@@ -9,6 +9,10 @@ import { Woman } from "./assets/Components/Pages/Woman/Woman"
 import Wishlist from "./assets/Components/Pages/Wishlist/wishlist"
 import Basket from "./assets/Components/Pages/Basket/Basket"
 import { DetailPage } from "./assets/Components/Pages/DetailPages/DetailPage"
+import AdminPanel from "./assets/Components/Pages/AdminPanel/AdminPanel"
+import Login from "./assets/Components/Pages/Login/Login"
+import Signup from "./assets/Components/Pages/SignUp/SignUp"
+import { Unisex } from "./assets/Components/Pages/Unisex/Unisex"
 
 
 
@@ -34,9 +38,13 @@ export const App: React.FC = () =>{
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/man-category" element={<Man/>}/>
                 <Route path="/woman-category" element={<Woman/>}/>
+                <Route path="/unisex-category" element={<Unisex/>}/>
                 <Route path='/wishList' element={<Wishlist/>}/>
                 <Route path='/your-basket' element={<Basket/>}/>
                 <Route path="/product/:id" element={<DetailPage/>}/>
+                <Route path="/admin" element={<AdminPanel/>}/>
+                <Route path='/login' element={<Login/>}/>
+                <Route path="/SignUp" element={<Signup/>}/>
               </Routes>
             </BrowserRouter>
 

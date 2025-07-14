@@ -4,12 +4,14 @@ import './secTwo.css'
 import man from'../../../Images/Man.png'
 import woman from '../../../Images/WWoman.png'
 import uni from '../../../Images/unisex.png'
+import kind from '../../../Images/3890909-200.png'
 import { useNavigate } from 'react-router-dom'
 
 const SectionTwo = () => {
   const navigate = useNavigate()
   return (
     <div className='secTwo'>
+      <h1 className='sec-two-category'>Kateqoriyalar</h1>
       <div className="secTwo-center">
         <BrandsLogo />
         <div className='category'>
@@ -28,7 +30,7 @@ const SectionTwo = () => {
             </div>
           </div>
           <div className="down-category">
-            <div className="uni">
+            <div onClick={() => navigate("/unisex-category")}  className="uni">
               <h1>Unisex ətirlər</h1>
               <div className="uni-image">
                 <img className="uniImage" src={uni} alt="" />
@@ -37,7 +39,7 @@ const SectionTwo = () => {
             <div className="kid">
               <h1>Uşaq ətirləri</h1>
               <div className="kid-image">
-                <img  className="kidImage"src="https://www.xxl-parfum.ch/images/kinder_parfum.jpg" alt="" />
+                <img  className="kidImage"src={kind} alt="" />
               </div>
             </div>
           </div>

@@ -1,25 +1,106 @@
-.card{
-    width: 50rem;
-    display: flex;
-    flex-wrap: wrap;
-
+.card {
+  width: 17rem;
+  display: flex;
+  flex-wrap: wrap !important;
+  border: 1px solid black !important;
+  border-radius: 25px !important;
+  overflow: hidden !important;
+  background-color: #fff !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: transform 0.3s, box-shadow 0.3s !important;
+  font-family: 'Montserrat', sans-serif;
 }
-.card .css-1kuwa16-MuiCardMedia-root {
-    height: 15rem;
-    object-fit: cover;
 
-  }
-
-.css-1i3faf7-MuiPaper-root-MuiCard-root{
-    display: flex;
-    justify-content: space-between;
-    
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-  .card .fav-basket{
-    font-size: 2rem;
-    display: flex;
-    gap:15px;
-    padding: 10px;
 
-  }
+.card-tittle{
+  border-bottom: 1px solid black;
   
+}
+.card-content span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+
+}
+
+.card-tittle span {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+.card-content{
+  border-top: 1px solid black;
+}
+
+.css-1i3faf7-MuiPaper-root-MuiCard-root {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.css-1lt5qva-MuiCardContent-root:last-child {
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.card-star {
+  padding: 16px !important;
+  font-family: 'Montserrat', sans-serif !important;
+
+}
+
+.card .fav-basket {
+  font-size: 2rem;
+  display: flex;
+  gap: 15px;
+  padding: 10px;
+  font-weight: 500;
+}
+.card .fav{
+  color: white;
+  background-color: rgb(249, 62, 62);
+  border-radius: 10px;
+  padding: 7px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
+}
+.fav-icon {
+  font-size: 26px;
+}
+.basket-icon {
+  font-size: 26px;
+}
+
+.card .baskett {
+  background-color: rgb(37, 145, 18);
+  border-radius: 10px;
+  padding: 7px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: white;
+}
+.fav:active{
+  background-color: rgb(255, 121, 121);
+}
+.baskett:active{
+  background-color: rgb(95, 144, 95);
+}
+
+.star{
+  color: #FFC000;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.card-star {
+  padding: 16px;
+}

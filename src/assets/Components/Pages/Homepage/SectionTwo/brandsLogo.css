@@ -1,5 +1,19 @@
 .slider {
-   width: 100%;
-   display: flex;
-   align-items: center;
+  width: 100%;
+  padding: 30px 0;
+  height: 100px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  object-fit: contain;
+  transition: 0.3s ease;
 }

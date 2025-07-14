@@ -11,7 +11,7 @@ export const wishListSlice = createSlice({
   reducers: {
     addToWishList: (state, action) => {
       if(state.items.some(item => item.id == action.payload.id)) {
-        alert("This item is already in the wishList") 
+          
       }else{
         state.items.push(action.payload);
         localStorage.setItem('wishList', JSON.stringify(state.items));

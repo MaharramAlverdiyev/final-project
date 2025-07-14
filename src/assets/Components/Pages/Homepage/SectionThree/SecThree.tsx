@@ -2,45 +2,51 @@ import { useEffect, useState } from 'react';
 import '../SectionThree/secthree.css';
 import { getProduct } from '../../../../redux/features/productSlice';
 import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from '../../../../redux/store'; 
 import Card from './Card/Card';
-import { Link } from 'react-router-dom';
+
 
 export const SecThree = () => {
   const dispatch = useDispatch();
-  const { value } = useSelector((state) => state.product);
+  const { products, loading, error } = useSelector((state: RootState) => state.product);
 
-  const [visibleItems, setVisibleItems] = useState(3);
+  const [visibleItems, setVisibleItems] = useState(4);
   const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     dispatch(getProduct());
   }, [dispatch]);
 
+
   const handleShowMore = () => {
     setShowAll(true);
-    setVisibleItems(value.length); 
+    setVisibleItems(products.length); 
   };
 
   const handleShowLess = () => {
     setShowAll(false);
-    setVisibleItems(3); 
+    setVisibleItems(4); 
   };
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error}</p>;
 
   return (
     <div className='secthree'>
       <div className='secthree-center'>
-        <h1>Ətirlər</h1>
+        <h1 style={{fontFamily:'Montserrat',fontWeight:'700'}}>Sizin üçün ətirlər</h1>
         <section className='secthree-product'>
-          {value.slice(0, visibleItems).map((item) => (
-             <Link to={`/product/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}><Card key={item.id} item={item} />
-             </Link>
+          {products.slice(0, visibleItems).map((item) => (
+   
+              <Card key={item.id} item={item} />
+ 
           ))}
         </section>
         <div className='secthree-controls'>
           {!showAll ? (
-            <button onClick={handleShowMore} >Bütün ətirlər</button>
+            <button onClick={handleShowMore}>Bütün ətirlər</button>
           ) : (
-            <button onClick={handleShowLess} >Geri</button>
+            <button onClick={handleShowLess}>Geri</button>
           )}
         </div>
       </div>

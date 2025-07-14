@@ -6,9 +6,11 @@ import { Header } from '../Homepage/Header/Header';
 import { Footer } from '../Homepage/Footer/Footer';
 import { GoDotFill } from 'react-icons/go';
 import './detailpage.css'
+import { addToBasket } from '../../../redux/features/basketSlice';
+import { useDispatch } from 'react-redux';
 
 export const DetailPage = () => {
-
+  const dispatch = useDispatch()
   const { id } = useParams<{ id: string }>(); 
   const [product, setProduct] = useState<any>(null);
   const [loading, setLoading] = useState(true);
@@ -41,6 +43,10 @@ export const DetailPage = () => {
 
   if (!product) {
     return <p>Ürün bulunamadı.</p>;
+  }
+
+  const handleAddToBasket = () => {
+    dispatch(addToBasket(product));
   }
 
   return (
@@ -78,7 +84,7 @@ export const DetailPage = () => {
                   <div className="count-button">
                     <button onClick={decrease}>-</button> <span>{count}</span> <button onClick={increase}>+</button>
                   </div>
-                  <button className="add-to-cart">Səbətə əlavə et</button>
+                  <button button onClick={handleAddToBasket} className="add-to-cart">Səbətə əlavə et</button>
                 </div>
               </div>
         </div>

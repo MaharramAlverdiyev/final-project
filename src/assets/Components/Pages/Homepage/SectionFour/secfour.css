@@ -1,5 +1,8 @@
 .sec-four-bloq{
     text-align: center;
+    padding: 30px;
+    font-size: 36px;
+    font-weight: 700;
 }
 .secfour-card{
     display: flex;
@@ -22,23 +25,14 @@
     flex-direction: column;
     width: 84%;
 }
-/* .secfour-cards{
-    width: 20rem;
-} */
 
-.card-image{
-    width: 23rem;
-    height: 15rem;
-    overflow: hidden;
-    position: relative;
-    object-fit: cover;
 
-}
 
 
 
 .secfour-card .title{
-    font-size: 1.20rem;
+    font-size: 1.20rem;   
+    width: 21.5rem;
 }
 .secfour-card .calendar-logo{
     color: darkgoldenrod;
@@ -52,4 +46,17 @@
 .secfour-card .text{
     color: darkgray;
     font-size: 14px;
+}
+
+
+@media (max-width:768px) {
+   .secfour-card .text{
+    color: darkgray;
+    font-size: 14px;
+    width: 19rem;
+}
+.sec-four .title {
+    width: 20rem;
+}
+
 }

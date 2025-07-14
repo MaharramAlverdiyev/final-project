@@ -3,6 +3,7 @@ import "./secfive.css"
 export const SectionFive = () => {
     return (
         <div className='sec-five'>
+            <h1 className='sec-five-about'>Haqqımızda</h1>
             <div className="sec-five-center">
                 <h4 className='sec5-title'>"Qarabagh Perfumery"</h4>
                 <h6 className='sec5-title'>Azərbaycan-da orijinal və brend ətirlərin satışı</h6>

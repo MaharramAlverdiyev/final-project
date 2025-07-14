@@ -1,0 +1,35 @@
+.card-Section video {
+    height: 700px;
+}
+
+.sign:hover {
+    cursor: pointer;
+}
+
+.cardd {
+    position: relative;
+    top: -20px;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    height: 600px;
+}
+
+.user-name span {
+    color: white !important;
+}
+
+.forgot button {
+    width: 70%;
+    display: inline-block;
+    transition: all 10s ease;
+    opacity: 0.8;
+    background: white;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .card-Section {
+        width: 20px;
+        position: relative;
+        top: 0;
+    }
+}

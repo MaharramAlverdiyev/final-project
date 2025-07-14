@@ -3,11 +3,11 @@ import axios from 'axios';
 import { Header } from '../Homepage/Header/Header';
 import { Footer } from '../Homepage/Footer/Footer';
 import { GoDotFill } from 'react-icons/go';
-import './woman.css';
+import './unisex.css';
 import { useNavigate } from 'react-router-dom';
 import RecipeReviewCard from '../Homepage/SectionThree/Card/Card';
 
-export const Woman = () => {
+export const Unisex = () => {
   const navigate = useNavigate();
   const [products, setProducts] = useState<any[]>([]);
   const [sortOption, setSortOption] = useState<string>('');
@@ -25,9 +25,9 @@ export const Woman = () => {
     fetchProducts();
   }, []);
 
-  const WomenProducts = products.filter(product => product.category === 'Women');
+  const UniProducts = products.filter(product => product.category === 'Unisex');
 
-  const sortedProducts = [...WomenProducts].sort((a, b) => {
+  const sortedProducts = [...UniProducts].sort((a, b) => {
     if (sortOption === 'price-asc') return a.price - b.price;
     if (sortOption === 'price-desc') return b.price - a.price;
     if (sortOption === 'name-asc') return a.name.localeCompare(b.name);
@@ -38,8 +38,8 @@ export const Woman = () => {
   return (
     <div>
       <Header />
-      <div className="woman-section">
-        <div className="woman-section-center">
+      <div className="unisex-section">
+        <div className="unisex-section-center">
           <ul>
             <li onClick={() => navigate("/")}>
               <a style={{ color: '#95979c', fontSize: '14px' }} href="#">
@@ -48,7 +48,7 @@ export const Woman = () => {
             </li>
             <li>
               <a style={{ color: '#232d40', fontSize: '14px', marginLeft: '5px' }} href="#">
-                <GoDotFill /> Qadın ətirləri
+                <GoDotFill /> Unisex ətirlər
               </a>
             </li>
           </ul>

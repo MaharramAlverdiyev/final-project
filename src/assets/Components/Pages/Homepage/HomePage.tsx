@@ -8,6 +8,8 @@ import { Footer } from './Footer/Footer'
 import './homepage.css'
 import { SectionFive } from './SectionFive/SectionFive'
 
+// import AdminPanel from "../AdminPanel/AdminPanel"
+
 export const HomePage = () => {
   return (
     <div>

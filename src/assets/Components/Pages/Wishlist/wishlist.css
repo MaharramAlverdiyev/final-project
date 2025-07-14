@@ -1,0 +1,10 @@
+.fav-section{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px   ;
+}
+.fav-section-center {
+    width: 90%;
+}

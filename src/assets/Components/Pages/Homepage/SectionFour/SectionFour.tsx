@@ -23,8 +23,13 @@ export const SectionFour = () => {
         {
           value.map((item) => (
             <Card key={item.id} style={{ width: '23rem', cursor:'pointer' }}>
-              <Card.Img variant="top" src={item.image} className='card-image' />
-              <Card.Body>
+              <Card.Img variant="top" src={item.image} className='card-image' 
+              style={{
+                width:'100%',
+                height:'190px',
+                objectFit:'cover'
+              }}/>
+              <Card.Body className='card-body'>
                 <Card.Title className='title'>{item.title}</Card.Title>
                 <Card.Title className='calendar'><FaRegCalendarAlt className='calendar-logo'/>{item.time}</Card.Title>
                 <Card.Text className='text'>{item.text}</Card.Text>

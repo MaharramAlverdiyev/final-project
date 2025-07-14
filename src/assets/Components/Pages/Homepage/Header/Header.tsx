@@ -12,17 +12,29 @@ import { setActiveItem } from '../../../../redux/features/menuSlice';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { getProduct } from '../../../../redux/features/productSlice';
+import { RootState } from '../../../../redux/store';
+
+interface Product {
+    id: string;
+    name: string;
+    brand: string;
+    category: string;
+    price: number;
+    stock: number;
+    image: string;
+}
 
 export const Header = () => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-
-    const activeItem = useSelector((state) => state.menu.activeItem);
-    const menuItems = useSelector((state) => state.menu.value);
-    const products = useSelector((state) => state.product.value);
-
+    const activeItem = useSelector((state: RootState) => state.menu.activeItem);
+    const menuItems = useSelector((state: RootState) => state.menu.value);
+    const products = useSelector((state: RootState) => state.product.products);
+    const wishListItems = useSelector((state: RootState) => state.wishList.items);
+    const basketItems = useSelector((state: RootState) => state.basket.items);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [searchQuery, setSearchQuery] = useState(""); // Arama sorgusu
-    const [filteredProducts, setFilteredProducts] = useState([]);
+    const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
 
     // İlk render sırasında ürünleri çek
     useEffect(() => {
@@ -40,10 +52,19 @@ export const Header = () => {
     return (
         <header>
             <div className="up-header">
-                <a href=""><CiFacebook /></a>
-                <a href=""><SlSocialInstagram /></a>
-                <a href=""><LiaTelegram /></a>
-                <a href=""><FaTiktok /></a>
+                <div className="up-header-social">
+                    <a href=""><CiFacebook /></a>
+                    <a href=""><SlSocialInstagram /></a>
+                    <a href=""><LiaTelegram /></a>
+                    <a href=""><FaTiktok /></a>
+                </div>
+                <div className="up-header-hamburger">
+                    <div className="mobile-menu-icon" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                        <div className="burger-line"></div>
+                        <div className="burger-line"></div>
+                        <div className="burger-line"></div>
+                    </div>
+                </div>
             </div>
             <div className="down-header">
                 <div onClick={() => navigate("/")} className="logo">
@@ -65,10 +86,11 @@ export const Header = () => {
                         <div className="search-results">
                             <ul>
                                 {filteredProducts.map((product) => (
-                                    <Link to={`/product/${product.id}`} style={{ textDecoration: 'none', color: 'inherit' }}><li key={product.id}>{product.name}</li></Link>
+                                    <Link to={`/product/${product.id}`} style={{ textDecoration: 'none', color: 'inherit' }} key={product.id}>
+                                        <li>{product.name}</li>
+                                    </Link>
                                 ))}
                             </ul>
-
                         </div>
                     )}
                     {searchQuery && filteredProducts.length === 0 && (
@@ -85,19 +107,28 @@ export const Header = () => {
                     <div onClick={() => navigate("/wishlist")} className="favorite">
                         <FaRegHeart />
                         <p>Bəyəndiklərim</p>
+                        {wishListItems.length > 0 && (
+                            <div className="count">{wishListItems.length}</div>
+                        )}
                     </div>
-                    <div className="login">
+
+                    <div onClick={() => navigate("/login")} className="login">
                         <VscAccount />
                         <p>Login</p>
                     </div>
+
                     <div onClick={() => navigate("/your-basket")} className="basket">
                         <SlBasket />
                         <p>Səbət</p>
+                        {basketItems.length > 0 && (
+                            <div className="countt">{basketItems.length}</div>
+                        )}
                     </div>
                 </div>
+
             </div>
             <div className="nav-bar-header">
-                <nav>
+                <nav className='navbar-header-two'>
                     <ul>
                         <li>Haqqımızda<MdKeyboardArrowDown /></li>
                         <li>Bloq<MdKeyboardArrowDown /></li>
@@ -106,23 +137,24 @@ export const Header = () => {
                     </ul>
                 </nav>
             </div>
-            <div className="products-navbar">
-                <p>Brendlər: </p>
+            <div className="nav-bar-header">
+                <p>Brendlər:</p>
+
                 <nav className="navbar-header">
-                    <ul className='navbar-header-ul'>
+                    <ul className="navbar-header-ul">
                         {menuItems.map((item) => (
                             <li
-                                className="nav-bar-header"
+                                className="menuTitles"
                                 key={item.id}
                                 onMouseEnter={() => dispatch(setActiveItem(item.id))}
                                 onMouseLeave={() => dispatch(setActiveItem(null))}
                             >
-                                <a href="">{item.title}</a>
+                                <span>{item.title}</span>
                                 {activeItem === item.id && (
                                     <div className="menuItems">
-                                        <ul className='menuItems-ul'>
+                                        <ul className="menuItems-ul">
                                             {item.items.map((subItem, index) => (
-                                                <li className='menuItems-li' key={index}>{subItem}</li>
+                                                <li className="menuItems-li" key={index}>{subItem}</li>
                                             ))}
                                         </ul>
                                     </div>
@@ -131,8 +163,31 @@ export const Header = () => {
                         ))}
                     </ul>
                 </nav>
+
                 <p>Bütün brendlər</p>
             </div>
+
+            {isMobileMenuOpen && (
+                <div className="mobile-menu">
+                    <ul>
+                        <li>
+                            Brendlər:
+                            <ul className="mobile-submenu">
+                                {menuItems.map((item) => (
+                                    <li key={item.id}>
+                                        {item.title}
+                                        <ul>
+                                            {item.items.map((subItem, i) => (
+                                                <li key={i}>{subItem}</li>
+                                            ))}
+                                        </ul>
+                                    </li>
+                                ))}
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            )}
         </header>
     );
 };

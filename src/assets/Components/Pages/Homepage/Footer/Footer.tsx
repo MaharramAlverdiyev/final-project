@@ -1,5 +1,7 @@
-
 import './Footer.css';
+import { IoCallOutline } from "react-icons/io5";
+import { IoMailOpenOutline } from "react-icons/io5";
+import { FaRegClock } from "react-icons/fa";
 
 export const Footer = () => {
     return (
@@ -15,7 +17,7 @@ export const Footer = () => {
                     </ul>
                 </div>
                 <div className="footer-column">
-                    <h4>İYDƏ PERFUMERY</h4>
+                    <h4>QARABAGH PERFUMERY</h4>
                     <ul>
                         <li>Bloq</li>
                         <li>Şirkət haqqında</li>
@@ -40,29 +42,10 @@ export const Footer = () => {
                 <div className="footer-column contact">
                     <h4>Əlaqə saxlamaq</h4>
                     <ul>
-                        <li>📞 +994 55 527 53 56</li>
-                        <li>✉️ qarabaghperfume@gmail.com</li>
-                        <li>🕒 09:00 – 23:00</li>
+                        <li><IoCallOutline style={{fontSize:'20px'}}/> +994 55 527 53 56</li>
+                        <li><IoMailOpenOutline style={{fontSize:'20px'}}/> qarabaghperfume@gmail.com</li>
+                        <li><FaRegClock style={{fontSize:'20px'}}/> 09:00 – 23:00</li>
                     </ul>
-                </div>
-            </div>
-            <div className="footer-subscribe">
-                <h4>Bizə abunə olun</h4>
-                <div className="down-footer">
-                    <div className="subscribe-container">
-                        <input type="email" placeholder="E-mail" />
-                        <button>➤</button>
-                    </div>
-                    <div className="social-icons">
-                        <span>📘</span>
-                        <span>📸</span>
-                        <span>🎥</span>
-                        <span>🎵</span>
-                    </div>
-                    <div className="store-icons">
-                        <button>App Store</button>
-                        <button>Play Store</button>
-                    </div>
                 </div>
             </div>
         </footer>

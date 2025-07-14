@@ -1,273 +1,446 @@
+/* === HEADER === */
 header {
     display: flex;
-    width: 100%;
     flex-direction: column;
     align-items: center;
+    width: 100%;
     padding: 10px;
-    /* gap: 10px; */
+    box-sizing: border-box;
 }
 
 header .up-header {
     display: flex;
-    width: 84%;
-    gap: 10px;
+    align-items: center;
     border-bottom: 1px solid #656565;
-    padding-bottom: 10px;
+    width: 84%;
+    justify-content: space-between;
+}
 
+header .up-header-social {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 10px;
 }
 
 header .up-header a {
     color: #656565;
-    font-size: 16px;
-
+    font-size: 18px;
 }
 
 header .down-header {
     display: flex;
     align-items: center;
-    width: 84%;
     justify-content: space-between;
+    width: 84%;
     margin-top: 20px;
-    gap: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-header .down-header img {
-    width: 100px;
-    height: 100px;
-}
-
-header .down-header .logo {
+header .logo {
     display: flex;
     align-items: center;
+    gap: 20px;
     cursor: pointer;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
-header .logo img{
+
+header .logo img {
     width: 83px;
     height: 90px;
-}
-header .logo .logo-text{
-    font-size: 26px;
-    margin-bottom: 0;
-}
-header .whatsapp-number {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    cursor: pointer;
-}
-header .whatsapp-number .whatsapp-text{
-    margin-bottom: 0;
-    font-size: 24px;
-    font-style: inherit;
-    font-weight: 600;
-    border-bottom: 1px solid black;
-}
-header .whatsapp-logo {
-    color: green;
-    font-size: 45px;
-    border-right: 1px solid black;
-    padding-right: 12px;
+    object-fit: cover;
 }
 
-
-header .down-header .search-bar input {
-    width: 357px;
-    height: 48px;
-    border: .15px solid #656565;
-    border-radius: 65px;
-    padding: 20px;
-    font-size: 20px;
-
+header .logo .logo-text {
+    font-size: 40px;
+    line-height: 1.2;
+    font-family: "Charm", cursive;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
 }
 
-header .down-header .search-container {
-    position: relative
-}
-
-header .down-header .search-bar-container .search-button {
-    position: absolute;
-    right: 10%;
-    top: 10%;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-header .down-header .search-bar .search-button:hover {
-    color: red;
-    cursor: pointer;
-    transition: 0.5s;
-}
-
-header .down-header .search-bar input::placeholder {
-    color: black;
-}
-
-header .down-header .login-basket {
-    display: flex;
-    justify-content: space-between;
-    gap: 18px;
-    cursor: pointer;
-}
-
-header .down-header .login-basket .login,
-.basket {
-    font-size: 46px;
-    text-align: center;
-    cursor: pointer;
-}
-header .favorite {
-    font-size: 46px;
-    text-align: center;
-    cursor: pointer;
-}
-
-header .down-header .login-basket p {
-    font-size: 16px;
-    text-align: center;
-}
-
-header .nav-bar-header {
-    width: 84%;
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-header .nav-bar-header nav {
-    display: flex;
-    justify-content: center;
-    width: 80%;
-}
-
-header .nav-bar-header nav ul {
-    display: flex;
-
-    font-size: 18px;
-    letter-spacing: .1rem;
-    width: 80%;
-    justify-content: space-between;
-}
-
-header .nav-bar-header nav ul li {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-header .products-navbar {
-    display: flex;
-    margin-top: 20px;
-    gap: 10px;
-    align-items: center;    
-}
-
-header .products-navbar nav ul {
-    display: flex;
-    gap: 10px;
-    /* align-items: center; */
-    padding-left: 0;
-}
-
-header .products-navbar li {
-    border-right: 1px solid black;
-    padding-right: 7px;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-header .products-navbar li:hover {
-    color: red;
-}
-
-header .products-navbar li a {
-    text-decoration: none;
-    list-style-type: none;
-    color: black;
-}
-header .products-navbar p {
-    font-size: 18px;
-    
-}
-
-/* header .menuTitles a {
-    text-decoration: none;
-    list-style-type: none;
-    position: relative;
-
-} */
-
-.navbar-header{
-    position: relative;
-    padding-bottom: 10px;
-}
-.menuItems {
-    position: absolute;
-    top: 60%;
-
-    /* left: 10rem; */
-    z-index: 99;
-}
-.menuItems .menuItems-ul{
-    /* display: none; */
-    flex-direction: column;
-    width: 10rem;
-    height: auto;
-    background-color: aliceblue;
-    border: none;
-    padding-left: 5px;
-}
-.menuItems .menuItems-li{
-    
-        color: black;
-        border: none;
-        font-size: 16px;
-        padding-bottom: 5px;
-        cursor: pointer;
-      
-    
-}
-.menuItems .menuItems-li:hover{
-    color: gray;
-}
+/* === SEARCH === */
 .search-bar-container {
     position: relative;
     width: 357px;
+    max-width: 100%;
+}
+
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 100%;
+    height: 48px;
+    border: 0.15px solid #656565;
+    border-radius: 65px;
+    padding: 0 50px 0 20px;
+    font-size: 18px;
+}
+
+.search-button {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.search-button:hover {
+    color: red;
+    transition: 0.3s;
 }
 
 .search-results {
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
-    background-color: #fff;
+    background: #fff;
     border: 1px solid #ccc;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10;
     width: 100%;
     max-height: 200px;
-    overflow-y: auto; 
-    border-radius: 15px;
+    overflow-y: auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius: 10px;
 }
-.search-bar{
-    position: relative;
-}
+
 .search-results ul {
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .search-results li {
     padding: 10px;
-    cursor: pointer;
     border-bottom: 1px solid #eee;
+    cursor: pointer;
 }
 
 .search-results li:hover {
-    background-color: #f0f0f0;
+    background-color: #f5f5f5;
 }
 
 .search-results p {
     padding: 10px;
-    color: #888;
     text-align: center;
+    color: #999;
+}
+
+/* === WHATSAPP === */
+.whatsapp-number {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.whatsapp-logo {
+    color: green;
+    font-size: 30px;
+    border-right: 1px solid #000;
+    padding-right: 10px;
+}
+
+.whatsapp-text {
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    margin: 0;
+}
+
+/* === LOGIN / BASKET === */
+.login-basket {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.login-basket>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    font-size: 40px;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.login-basket p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.favorite,
+.basket {
+    font-size: 36px;
+    text-align: center;
+    position: relative;
+}
+.count{
+    position: absolute;
+    font-size: 12px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 1px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    top: -10px;
+    right: 25px;
+}
+.countt {
+    position: absolute;
+    font-size: 12px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+    border-radius: 1px solid black;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    top: -10px;
+    right: -10px;
+}
+
+/* === NAV BAR === */
+.nav-bar-header {
+    width: 84%;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-header-two ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-header-two li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-bar-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 10px 0;
+}
+
+.nav-bar-header>p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar-header-ul {
+    display: flex;
+    gap: 10px;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.menuTitles {
+    position: relative;
+    padding-right: 7px;
+    border-right: 1px solid black;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menuTitles:last-child {
+    border-right: none;
+}
+
+.menuItems {
+    position: absolute;
+    top: 100%;
+    left: -50px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    min-width: 160px;
+    z-index: 999;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.menuItems-ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuItems-li {
+    padding: 6px 10px;
+    font-size: 14px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.menuItems-li:hover {
+    background-color: #f5f5f5;
+}
+
+/* === MOBILE MENU ICON === */
+.mobile-menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.burger-line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+}
+
+/* === MOBILE MENU === */
+.mobile-menu {
+    position: absolute;
+    top: 10%;
+    left: 10;
+    width: 90%;
+    height: 40%;
+    object-fit: scale-down;
+    background-color: white;
+    z-index: 999;
+    padding: 20px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-menu li {
+    padding: 10px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-submenu {
+    padding-left: 15px;
+}
+
+.mobile-submenu li {
+    font-size: 16px;
+    color: #444;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 1200px) {
+    .down-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-basket {
+        justify-content: center;
+    }
+
+    .whatsapp-number {
+        justify-content: center;
+    }
+
+    .nav-bar-header,
+    .navbar-header {
+        display: none !important;
+    }
+
+    .search-bar-container {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .nav-bar-header,
+    .products-navbar {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: flex;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo .logo-text {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .logo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-basket>div {
+        font-size: 25px;
+    }
+
+    .whatsapp-logo {
+        font-size: 28px;
+        padding-right: 6px;
+    }
+
+    .whatsapp-text {
+        font-size: 18px;
+    }
+
+    .products-navbar {
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .products-navbar nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .products-navbar p {
+        font-size: 14px;
+    }
 }

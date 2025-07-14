@@ -1,21 +1,21 @@
 
-.woman-section ul{
+.unisex-section ul{
     display: flex;
     align-items: center;
 
 }
-.woman-section ul li a {
+.unisex-section ul li a {
    text-decoration: none; 
  } 
 
-.woman-section-center{
+.unisex-section-center{
     display: flex;
     flex-direction: column;
     width: 84%;
     justify-content: center;
 
 }
-.woman-section {
+.unisex-section {
     padding: 20px;
     width: 100%;
     display: flex;

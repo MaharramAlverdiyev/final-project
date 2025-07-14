@@ -15,7 +15,7 @@ export const BrandsLogo = () => {
   useEffect(() => {
     const fetchPhotos = async () => {
       try {
-        const response = await fetch('https://672f319c229a881691f220af.mockapi.io/Brands'); 
+        const response = await fetch('https://672f319c229a881691f220af.mockapi.io/Brands');
         const data = await response.json();
         setPhotos(data);
       } catch (error) {
@@ -28,19 +28,25 @@ export const BrandsLogo = () => {
 
   return (
     <div>
-      <Swiper 
-        className='slider'
+      <Swiper
+        className="slider"
         modules={[A11y]}
-        spaceBetween={50}
-        slidesPerView={5}
+        spaceBetween={20}
+        slidesPerView={5} 
+        breakpoints={{
+          320: { slidesPerView: 2 },
+          480: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 5 },
+        }}
       >
         {photos.map((photo) => (
           <SwiperSlide key={photo.id}>
-            <img src={photo.image} alt="" style={{ width: '100%', height: 'auto' }} />
-           
+            <img src={photo.image} alt="" className="slider-img" />
           </SwiperSlide>
         ))}
       </Swiper>
+
     </div>
   );
 };

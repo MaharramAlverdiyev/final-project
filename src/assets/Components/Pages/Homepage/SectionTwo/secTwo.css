@@ -2,167 +2,162 @@
     display: flex;
     justify-content: center;
     width: 100%;
-  
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
 }
-.secTwo-center{
+
+.secTwo-center {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 84%;
+    width: 90%;
+    max-width: 1200px;
 }
-.secTwo h1{
+
+.secTwo h1 {
     display: flex;
-    justify-content: center;
 }
-.secTwo .category{
+
+.secTwo .sec-two-category {
+    font-size: 36px;
+    padding: 30px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.secTwo .category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+
+}
+
+.secTwo .category .up-category,
+.secTwo .category .down-category {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    flex-direction: column;
-    align-items:center;
-    /* gap: 30px; */
-    /* border: 1px solid black; */
-    height: 36rem;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
-.secTwo .category .up-category{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    text-align: start;
-    /* border: 1px solid black; */
-    height: 18rem;
-    /* padding: 10px; */
-}
-.secTwo .category .down-category{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    text-align: start;
-    /* border: 1px solid black; */
-    height: 18rem;
-    /* padding: 10px; */
-}
-.secTwo .man{
+.secTwo .man,
+.secTwo .woman,
+.secTwo .uni,
+.secTwo .kid {
     display: flex;
     position: relative;
-    border: 1px solid black;
-    width: 100%;
-    padding: 10px;
+    border: 3px solid black;
+    width: 48%;
+    min-width: 250px;
+    padding: 15px;
     cursor: pointer;
+    box-sizing: border-box;
+    height: 250px; 
 }
-.secTwo .man:hover .manImage {
 
-    transform: scale(1.2);  
-}
-.secTwo .man .manImage {
-    transition: 0.5s;
-}
-.secTwo .man h1{
-    display: flex;
-    justify-content: start;
-}
-.secTwo .man .man-image{
-    position: absolute;
-    /* left: 180%; */
-    bottom: 7%;
-    right: 4%;
-    
-}
-.secTwo .manImage{
-    width: 200px;
-    height: 200px;
+.secTwo .man{
+    border-top-left-radius: 15px;
 }
 .secTwo .woman{
-    display: flex;
-    position: relative;
-    border: 1px solid black;
-    width: 100%;
-    padding: 10px;
-    cursor: pointer;
-}
-.secTwo .woman:hover .womanImage {
-
-    transform: scale(1.2);  
-}
-.secTwo .woman .womanImage {
-
-    transition: 0.5s;  
-}
-.secTwo .woman h1{
-    display: flex;
-   
-    justify-content: start; 
- 
-}
-.secTwo .woman .woman-image{
-    position: absolute;
-    bottom: 5%;
-    right: 0;
-    object-fit: cover;
-    
-}
-.secTwo .womanImage{
-    /* width: 200px; */
-    height: 200px;
+    border-top-right-radius: 15px;
 }
 .secTwo .uni{
-    display: flex;
-    position: relative;
-    border: 1px solid black;
-    width: 100%;
-    padding: 10px;
-    cursor: pointer;
-}
-.secTwo .uni:hover .uniImage {
-    transform: scale(1.2);  
-}
-.secTwo .uni .uniImage{
-    transition: 0.5s;
-}
-.secTwo .uni h1{
-    display: flex;
-    justify-content: start; 
-}
-.secTwo .uni .uni-image{
-    position: absolute;
-    bottom: 6%;
-    right: 0;
-    
-}
-.secTwo .uniImage{
-    /* width: 300px; */
-    height: 200px;
+    border-bottom-left-radius: 15px;
 }
 .secTwo .kid{
-    display: flex;
-    position: relative;
-    border: 1px solid black;
-    width: 100%;
-    padding: 10px;
-    cursor: pointer;
+    border-bottom-right-radius: 15px;
 }
+
+.secTwo .man:hover .manImage,
+.secTwo .woman:hover .womanImage,
+.secTwo .uni:hover .uniImage,
 .secTwo .kid:hover .kidImage {
-    transform: scale(1.2);  
+    transform: scale(1.1);
 }
-.secTwo .kid .kidImage{
+
+.secTwo .manImage,
+.secTwo .womanImage,
+.secTwo .uniImage,
+.secTwo .kidImage {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     transition: 0.5s;
 }
-.secTwo .kid h1{
+
+.secTwo .man h1,
+.secTwo .woman h1,
+.secTwo .uni h1,
+.secTwo .kid h1 {
     display: flex;
-    justify-content: start; 
-
+    justify-content: start;
+    font-weight: 600;
 }
-.secTwo .kid .kid-image{
+
+.secTwo .man .man-image,
+.secTwo .woman .woman-image,
+.secTwo .uni .uni-image,
+.secTwo .kid .kid-image {
     position: absolute;
-    bottom: 5%;
-    right: 5%;
-    
-}
-.secTwo .kidImage{
-    width: 300px;
-    height: 100px;
-    /* object-fit: cover; */
+    bottom: 10px;
+    right: 10px;
 }
 
+/* Tablet */
+@media (max-width: 1024px) {
+
+    .secTwo .man,
+    .secTwo .woman,
+    .secTwo .uni,
+    .secTwo .kid {
+        width: 100%;
+    }
+
+    .secTwo .category .up-category,
+    .secTwo .category .down-category {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+
+    .secTwo .manImage,
+    .secTwo .womanImage,
+    .secTwo .uniImage,
+    .secTwo .kidImage {
+        width: 50%;
+        height: auto;
+        
+    }
+
+    .secTwo .man,
+    .secTwo .woman,
+    .secTwo .uni,
+    .secTwo .kid {
+        flex-direction: column;
+        align-items: flex-start;
+        position: relative;
+        border-radius: 15px;
+    }
+
+    .secTwo .man .man-image,
+    .secTwo .woman .woman-image,
+    .secTwo .uni .uni-image,
+    .secTwo .kid .kid-image {
+        /* position: static; */
+        display: flex;
+        margin-top: 10px;
+        justify-content: end;
+    }
+    .secTwo .man,
+.secTwo .woman,
+.secTwo .uni,
+.secTwo .kid {
+    height:240px;
+}
+}
