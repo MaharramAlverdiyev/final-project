@@ -58,10 +58,10 @@ export const DetailPage = () => {
   }
 
   return (
+    <>
+    <Header />
     <div className="detail-page">
-      <Header />
       <div className="detail-sec">
-        <div className="detail-sec-center">
           <ul style={{ display: 'flex', gap: '10px', alignItems: 'center', justifyContent: 'center', width: '26%',  }}>
             <li style={{color:'#555'}}>Ətirlər</li>
             <li style={{display:'flex', alignItems:'center', gap:'10px'}}>
@@ -69,6 +69,7 @@ export const DetailPage = () => {
               {product.name}
             </li>
           </ul>
+        <div className="detail-sec-center">
           <div className="product-container">
             <div className="product-image">
               <img style={{ width: '200px' }} src={product.image} alt={product.name} />
@@ -134,9 +135,10 @@ export const DetailPage = () => {
               </div>
             </div>
           </div>
-          <Footer />
         </div>
       </div>
     </div>
+          <Footer />
+          </>
   );
 };
