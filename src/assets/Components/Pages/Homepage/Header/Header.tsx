@@ -99,10 +99,10 @@ export const Header = () => {
                         </div>
                     )}
                 </div>
-                <div className="whatsapp-number">
+                {/* <div className="whatsapp-number">
                     <FaWhatsapp className='whatsapp-logo' />
                     <p className='whatsapp-text'>+994 55 527 53 56</p>
-                </div>
+                </div> */}
                 <div className="login-basket">
                     <div onClick={() => navigate("/wishlist")} className="favorite">
                         <FaRegHeart />
@@ -114,7 +114,7 @@ export const Header = () => {
 
                     <div onClick={() => navigate("/login")} className="login">
                         <VscAccount />
-                        <p>Login</p>
+                        <p>Hesabım</p>
                     </div>
 
                     <div onClick={() => navigate("/your-basket")} className="basket">

@@ -17,13 +17,10 @@
     color: white !important;
 }
 
-.forgot button {
-    width: 70%;
-    display: inline-block;
-    transition: all 10s ease;
-    opacity: 0.8;
-    background: white;
-    color: black;
+
+.input{
+    display: flex;
+    gap: 15px;
 }
 
 @media (max-width: 600px) {

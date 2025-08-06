@@ -4,6 +4,7 @@ import  productSlice from '../features/productSlice'
 import blogSlice  from '../features/blogSlice'
 import  wishListSlice  from '../features/wishListSlice'
 import  basketSlice  from '../features/basketSlice'
+import authReducer from '../features/authSlice'
 
 export const store = configureStore({
     reducer: {
@@ -11,7 +12,8 @@ export const store = configureStore({
         menu: MenuSlice,
         blog: blogSlice,
         wishList: wishListSlice,
-        basket: basketSlice
+        basket: basketSlice,
+        auth: authReducer
 
     },
 })

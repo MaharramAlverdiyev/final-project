@@ -33,7 +33,7 @@ header .down-header {
     justify-content: space-between;
     width: 84%;
     margin-top: 20px;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 

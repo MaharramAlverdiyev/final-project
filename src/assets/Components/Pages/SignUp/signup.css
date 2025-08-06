@@ -77,7 +77,7 @@
 .card-Section .cardd .type .input input {
     font-family: Poppins;
     font-size: 16px;
-    color: black !important ;
+    color: black ;
     line-height: 1.2;
     display: block;
     height: 55px;
@@ -85,14 +85,13 @@
     padding: 0 7px 0 17px;
     border: none;
     outline: none;
-    transition: all 2s ease-in;
     width: 30rem;
 
 }
 
 .card-Section .cardd .type .input input:focus {
-    outline: none;
-    border-color: transparent !important;
+    
+    border-color: transparent ;
 }
 
 .card-Section .cardd .type input::after {
